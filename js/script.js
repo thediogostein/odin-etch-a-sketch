@@ -36,7 +36,7 @@ btnConfirm.addEventListener("click", () => {
 });
 
 const squareColorChange = (e) => {
-  e.target.style.backgroundColor = "red";
+  e.target.style.backgroundColor = "#" + randomColor();
 };
 
 function addSquareEvent() {
@@ -44,4 +44,9 @@ function addSquareEvent() {
     item.addEventListener("mouseover", squareColorChange);
   });
 }
+
+function randomColor() {
+  return Math.floor(Math.random() * 16777215).toString(16);
+}
+
 addSquareEvent();
