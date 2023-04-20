@@ -1,6 +1,7 @@
 const container = document.querySelector(".container");
 const btnConfirm = document.querySelector("#btnConfirm");
-const gridSize = document.querySelector("#grid-size");
+const inGridSize = document.querySelector("#grid-size");
+const btnReset = document.querySelector("#btnReset");
 
 function createRows(n) {
   for (let i = 0; i < n; i++) {
@@ -17,11 +18,19 @@ function createRows(n) {
 
 createRows(16);
 
+btnReset.addEventListener("click", () => {
+  container.innerHTML = "";
+  createRows(16);
+  square = document.querySelectorAll(".square");
+  addSquareEvent();
+  inGridSize.value = "16";
+});
+
 let square = document.querySelectorAll(".square");
 
 btnConfirm.addEventListener("click", () => {
   container.innerHTML = "";
-  createRows(gridSize.value);
+  createRows(inGridSize.value);
   square = document.querySelectorAll(".square");
   addSquareEvent();
 });

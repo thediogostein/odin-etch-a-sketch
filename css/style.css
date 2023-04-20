@@ -4,8 +4,14 @@ body {
   padding: 0;
 }
 
+h1,
+p {
+  margin-top: 0;
+}
+
 h1 {
   font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 p {
@@ -16,6 +22,32 @@ p {
   max-width: 960px;
   background-color: bisque;
   margin: 0 auto;
+}
+
+.input-container {
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.5em 1em;
+  font-size: 1.1rem;
+  color: white;
+}
+
+#btnConfirm {
+  background-color: rgb(33, 63, 235);
+}
+
+#btnConfirm:hover {
+  background-color: rgb(9, 42, 226);
+}
+
+#btnReset {
+  background-color: rgb(235, 63, 33);
+}
+
+#btnReset:hover {
+  background-color: rgb(209, 38, 8);
 }
 
 .container {
