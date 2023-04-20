@@ -23,15 +23,16 @@ btnConfirm.addEventListener("click", () => {
   container.innerHTML = "";
   createRows(gridSize.value);
   square = document.querySelectorAll(".square");
-  square.forEach((item) => {
-    item.addEventListener("mouseover", squareColorChange);
-  });
+  addSquareEvent();
 });
 
 const squareColorChange = (e) => {
   e.target.style.backgroundColor = "red";
 };
 
-square.forEach((item) => {
-  item.addEventListener("mouseover", squareColorChange);
-});
+function addSquareEvent() {
+  square.forEach((item) => {
+    item.addEventListener("mouseover", squareColorChange);
+  });
+}
+addSquareEvent();
