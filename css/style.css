@@ -21,18 +21,19 @@ p {
 .container {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+
   background-color: blueviolet;
 }
 
 .row {
   display: flex;
-  gap: 2px;
 }
 
 .square {
   background-color: aqua;
-  width: 30px;
-  height: 30px;
-  flex: 0 0 auto;
+  /* width: 10px; */
+  height: 100%;
+  flex: 1 0 auto;
+  aspect-ratio: 1;
+  border: 1px solid black;
 }

@@ -1,4 +1,6 @@
 const container = document.querySelector(".container");
+const btnConfirm = document.querySelector("#btnConfirm");
+const gridSize = document.querySelector("#grid-size");
 
 function createRows(n) {
   for (let i = 0; i < n; i++) {
@@ -15,17 +17,16 @@ function createRows(n) {
 
 createRows(16);
 
-// const square = document.querySelectorAll(".square");
+let square = document.querySelectorAll(".square");
 
-// let clickEvent = () => {
-//   console.log("Gotcha");
-// };
-
-// square.forEach((item) => {
-//   item.addEventListener("mouseover", clickEvent);
-// });
-
-const square = document.querySelectorAll(".square");
+btnConfirm.addEventListener("click", () => {
+  container.innerHTML = "";
+  createRows(gridSize.value);
+  square = document.querySelectorAll(".square");
+  square.forEach((item) => {
+    item.addEventListener("mouseover", squareColorChange);
+  });
+});
 
 const squareColorChange = (e) => {
   e.target.style.backgroundColor = "red";
